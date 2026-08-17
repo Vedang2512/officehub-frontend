@@ -64,7 +64,7 @@ function App() {
         if (!token) {
 
             websocketService.disconnect();
-            notificationSubscription.current?.unsubscribe();
+            websocketService.unsubscribe("/user/queue/notifications");
             notificationSubscription.current = null;
 
             return;
@@ -86,7 +86,7 @@ function App() {
 
                 dispatch(setUnreadCount(unread));
 
-                notificationSubscription.current?.unsubscribe();
+                websocketService.unsubscribe("/user/queue/notifications");
 
                 notificationSubscription.current =
                     websocketService.subscribe(
@@ -111,7 +111,7 @@ function App() {
 
         return () => {
 
-            notificationSubscription.current?.unsubscribe();
+           websocketService.unsubscribe("/user/queue/notifications");
             notificationSubscription.current = null;
 
             
