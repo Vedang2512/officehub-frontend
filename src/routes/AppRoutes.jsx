@@ -4,7 +4,7 @@ import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import Dashboard from "../pages/dashboard/Dashboard";
 import Chat from "../pages/chat/Chat";
-import TaskBoard from "../pages/tasks/TaskBoard";
+import TaskBoard from "../pages/tasks/Taskboard";
 import Profile from "../pages/profile/Profile";
 import Settings from "../pages/settings/Settings";
 import ProtectedRoute from "../components/ProtectedRoute";
@@ -19,6 +19,7 @@ import EditTask from "../pages/tasks/EditTask";
 import Forbidden from "../pages/errors/Forbidden";
 import NotFound from "../pages/errors/NotFound";
 import ServerError from "../pages/errors/ServerError";
+
 
 export default function AppRoutes() {
     return (
