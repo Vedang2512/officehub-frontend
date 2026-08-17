@@ -23,6 +23,14 @@ export default function MessageBubble({
 
     const mine =
         String(message.senderId) === String(currentUserId);
+        console.log("CHAT DEBUG:", {
+            messageId: message.id,
+            senderId: message.senderId,
+            currentUserId,
+            deleted: message.deleted,
+            sentAt: message.sentAt,
+            mine
+        });
 
     const isDeleted =
         message.deleted;
