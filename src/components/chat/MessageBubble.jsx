@@ -22,7 +22,7 @@ export default function MessageBubble({
     
 
     const mine =
-        message.senderId === currentUserId;
+        String(message.senderId) === String(currentUserId);
 
     const isDeleted =
         message.deleted;
