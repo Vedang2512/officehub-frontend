@@ -23,14 +23,7 @@ export default function MessageBubble({
 
     const mine =
         String(message.senderId) === String(currentUserId);
-        console.log("CHAT DEBUG:", {
-            messageId: message.id,
-            senderId: message.senderId,
-            currentUserId,
-            deleted: message.deleted,
-            sentAt: message.sentAt,
-            mine
-        });
+        
 
     const isDeleted =
         message.deleted;
@@ -60,7 +53,7 @@ export default function MessageBubble({
 
     const messageAge =
         currentTime -
-        new Date(message.sentAt).getTime();
+        new Date(`${message.sentAt}Z`).getTime();
 
     const canModify =
         mine &&
