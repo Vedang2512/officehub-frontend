@@ -73,6 +73,11 @@ export default function Sidebar() {
                 icon: LayoutDashboard
             },
             {
+                name: "Organization",
+                path: "/organization",
+                icon: Building2
+            },
+            {
                 name: "Teams",
                 path: "/teams",
                 icon: UsersRound
